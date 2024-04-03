@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Ready To Start Vue.js 3"/>
+  <HelloWorld msg="Ready To Start VueX"/>
 </template>
 
 <script>
