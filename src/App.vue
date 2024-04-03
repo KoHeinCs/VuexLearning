@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Ready To Start VueX"/>
+  <ProductListOne :products="products"></ProductListOne>
+  <ProductListTwo :products="products"></ProductListTwo>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import ProductListOne from './components/ProductListOne';
+import ProductListTwo from './components/ProductListTwo'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProductListOne,
+    ProductListTwo
+  },
+  data(){
+    return {
+      products:[
+        {name:'Bana Skin',price:20},
+        {name:'Shiny Star',price:40},
+        {name:'Green Shells',price:60},
+        {name:'Red Shells',price:80}
+      ]
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>
