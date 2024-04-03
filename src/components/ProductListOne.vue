@@ -13,9 +13,14 @@
 </template>
 
 <script>
+
 export default {
     name: 'ProuductListOne',
-    props: ['products']
+    computed: {
+        products() {
+            return this.$store.state.products;
+        }
+    }
 }
 </script>
 
@@ -42,7 +47,8 @@ export default {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 0;
-    list-style: none; /* Remove bullet points */
+    list-style: none;
+    /* Remove bullet points */
 }
 
 /* Styling for each list item */
