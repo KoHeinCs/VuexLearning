@@ -1,6 +1,7 @@
 import {createStore} from 'vuex'
 import {reducePrice} from './actions'
 import {reducePriceMutation} from './mutations'
+import {saleProducts} from './getters'
 
 const store = createStore({
     state() {
@@ -17,12 +18,7 @@ const store = createStore({
     devtools: true,
     strict:true,
     getters: {
-        saleProducts: state => state.products.map(product => {
-            return {
-                name: '**' + product.name + '**',
-                price: product.price / 2
-            }
-        })
+        saleProducts
     },
     mutations:{
         reducePriceMutation
