@@ -1,4 +1,5 @@
 import {createStore} from 'vuex'
+import {reducePrice} from './actions'
 
 const store = createStore({
     state() {
@@ -26,12 +27,7 @@ const store = createStore({
         reducePrice : (state,payload) => state.products.forEach(product => product.price -= payload)
     },
     actions:{
-        reducePrice: (store,payload) => {
-            setTimeout(function (){
-                store.commit('reducePrice',payload)
-            },2000)
-
-        }
+        reducePrice
     }
 })
 
