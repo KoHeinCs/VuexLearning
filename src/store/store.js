@@ -5,14 +5,11 @@ import {saleProducts} from './getters'
 import {products} from './states'
 
 const store = createStore({
-    state() {
-        return {
-            products
-        }
-
-    },
     devtools: true,
     strict: true,
+    state: {
+        products
+    },
     getters: {
         saleProducts
     },
