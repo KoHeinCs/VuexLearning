@@ -27,10 +27,9 @@ export default {
       message: "Ready To Learn Vuex "
     }
   },
-  computed:
-      mapGetters({
-        saleProducts: 'saleProducts'
-      }),
+  computed: {
+    ...mapGetters(["saleProducts"])
+  },
   methods: {
     reducePrice() {
       //return this.$store.commit('reducePrice',1)
