@@ -1,24 +1,18 @@
 import {createStore} from 'vuex'
-import {reducePrice} from './actions'
-import {reducePriceMutation} from './mutations'
-import {saleProducts} from './getters'
+
 import {products} from './states'
+import * as getters from './getters'
+import * as mutations from './mutations'
+import * as actions from './actions'
+
 
 const store = createStore({
     devtools: true,
     strict: true,
-    state: {
-        products
-    },
-    getters: {
-        saleProducts
-    },
-    mutations: {
-        reducePriceMutation
-    },
-    actions: {
-        reducePrice
-    }
+    state:{products},
+    getters,
+    mutations,
+    actions
 })
 
 export default store
