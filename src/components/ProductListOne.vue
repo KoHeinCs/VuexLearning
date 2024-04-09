@@ -18,6 +18,8 @@
 
 <script>
 
+import {mapGetters} from 'vuex'
+
 export default {
   name: 'ProuductListOne',
   data() {
@@ -25,18 +27,14 @@ export default {
       message: "Ready To Learn Vuex "
     }
   },
-  computed: {
-    products() {
-      return this.$store.state.products;
-    },
-    saleProducts() {
-      return this.$store.getters.saleProducts;
-    }
-  },
-  methods:{
-    reducePrice(){
+  computed:
+      mapGetters({
+        saleProducts: 'saleProducts'
+      }),
+  methods: {
+    reducePrice() {
       //return this.$store.commit('reducePrice',1)
-     this.$store.dispatch('reducePrice',1);
+      this.$store.dispatch('reducePrice', 1);
     }
   }
 }
