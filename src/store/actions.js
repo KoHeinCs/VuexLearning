@@ -2,7 +2,7 @@
 
 export const reducePrice = (store, payload) => {
     setTimeout(function () {
-        store.commit('reducePrice', payload)
+        store.commit('reducePriceMutation', payload)
     }, 2000)
 
 }

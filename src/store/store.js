@@ -24,7 +24,7 @@ const store = createStore({
         })
     },
     mutations:{
-        reducePrice : (state,payload) => state.products.forEach(product => product.price -= payload)
+        reducePriceMutation : (state,payload) => state.products.forEach(product => product.price -= payload)
     },
     actions:{
         reducePrice
