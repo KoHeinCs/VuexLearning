@@ -1,5 +1,6 @@
 import {createStore} from 'vuex'
 import {reducePrice} from './actions'
+import {reducePriceMutation} from './mutations'
 
 const store = createStore({
     state() {
@@ -24,7 +25,7 @@ const store = createStore({
         })
     },
     mutations:{
-        reducePriceMutation : (state,payload) => state.products.forEach(product => product.price -= payload)
+        reducePriceMutation
     },
     actions:{
         reducePrice
