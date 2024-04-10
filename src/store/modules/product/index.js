@@ -6,7 +6,7 @@ import * as mutations from './mutations'
 import * as actions from './actions'
 
 
-const store = createStore({
+const index = createStore({
     devtools: true,
     strict: true,
     state:{products},
@@ -15,5 +15,5 @@ const store = createStore({
     actions
 })
 
-export default store
+export default index
 
