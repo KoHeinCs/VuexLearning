@@ -17,7 +17,7 @@ export default {
     name: 'ProuductListTwo',
     computed: {
         products() {
-            return this.$store.state.products;
+            return this.$store.state.productModule.products;
         }
     }
 }

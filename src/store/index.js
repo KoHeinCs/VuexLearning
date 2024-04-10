@@ -6,7 +6,7 @@ const store = createStore({
     devtools: true,
     strict: true,
     modules:{
-        product:productModule
+        productModule
     }
 })
 
