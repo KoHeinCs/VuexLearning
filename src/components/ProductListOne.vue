@@ -28,10 +28,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["saleProducts"])
+    ...mapGetters('productModule',["saleProducts"])
   },
   methods: {
-    ...mapActions(['reducePrice'])
+    ...mapActions('productModule',['reducePrice'])
   }
 }
 </script>
