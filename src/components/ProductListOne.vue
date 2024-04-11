@@ -16,6 +16,8 @@
   </div>
 </template>
 
+/** This is traditional style **/
+<!--
 <script>
 
 import {mapGetters,mapActions} from 'vuex'
@@ -34,6 +36,22 @@ export default {
     ...mapActions('productModule',['reducePrice'])
   }
 }
+</script>
+-->
+
+/** This is composition api usage style **/
+
+<script setup>
+
+import {computed} from "vue";
+import { useStore } from 'vuex';
+const store = useStore();
+
+
+const saleProducts = computed(()=> store.getters['productModule/saleProducts']);
+const reducePrice =  (payload)=>store.dispatch('productModule/reducePrice',payload)
+
+
 </script>
 
 <style scoped>
